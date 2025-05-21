@@ -19,6 +19,7 @@ manual_input = st.text_input('Or enter a song name')
 
 song_to_recommend = manual_input.strip().lower() if manual_input else song_input.strip().lower()
 
+
 if st.button('Recommend'):
     try:
         recs = get_content_based_recommendations(df, song_to_recommend, feature_cols)
